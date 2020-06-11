@@ -1,0 +1,43 @@
+body header div.container nav.lightTheme{
+    background-color: #D8315B!important;
+    opacity: 0.8;
+}
+
+body header div.container nav.darkTheme{
+    background-color: #046865!important;
+    opacity: 0.8;
+}
+
+.lightThemeToggle{
+    border-radius: 5px;
+    background-color: #DFF3E4!important;
+    opacity: 0.8;
+    color: #046865!important;
+}
+
+.darkThemeToggle{
+    border-radius: 5px;
+    background-color: #1F0318!important;
+    opacity: 0.8;
+    color: #D58936!important;
+}
+
+nav.lightTheme .active{
+    border-radius: 5px;
+    background-color: #DFF3E4!important;
+    opacity: 0.8;
+    color: #046865!important;
+    border-width: 3px 2px !important;
+    border-style: solid;
+    border-color: #3943B7!important;
+}
+
+nav.darkTheme .active{
+    border-radius: 5px;
+    background-color: #1F0318!important;
+    opacity: 0.8;
+    color: #D58936!important;
+    border-width: 3px 2px !important;
+    border-style: solid;
+    border-color: #6E6A6F!important;
+}
