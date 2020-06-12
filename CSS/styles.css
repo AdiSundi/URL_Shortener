@@ -1,43 +1,45 @@
-main{
+main {
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(to top,#046865 0%, #046865 27.5%, #3943b7 72.5%, #3943b7 100%);
+    background-image: linear-gradient(to top, #046865 0%, #046865 27.5%, #3943b7 72.5%, #3943b7 100%);
     overflow-x: hidden;
-    font-family: 'Shadows Into Light', Arial, Helvetica, sans-serif; 
+    font-family: 'Shadows Into Light', Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
 }
 
-body header div.container nav.lightTheme{
+body header div.container nav.lightTheme {
     background-color: #D8315B;
     opacity: 0.95;
     color: #046865;
 }
 
-body header div.container nav.lightTheme a{
+body header div.container nav.lightTheme a {
     color: #046865;
 }
 
-body header div.container nav.darkTheme{
+body header div.container nav.darkTheme {
     background-color: #046865;
     opacity: 0.95;
     color: #D58936;
 }
 
-body header div.container nav.darkTheme a{
+body header div.container nav.darkTheme a {
     color: #D58936;
 }
 
-nav.lightTheme a.active, nav.lightTheme li.active{
+nav.lightTheme a.active,
+nav.lightTheme li.active {
     border-radius: 5px;
     background-color: #DFF3E4;
     opacity: 0.8;
     color: #046865;
-    border-width: 3px 2px ;
+    border-width: 3px 2px;
     border-style: solid;
     border-color: #3943B7;
 }
 
-nav.darkTheme a.active, nav.darkTheme li.active{
+nav.darkTheme a.active,
+nav.darkTheme li.active {
     border-radius: 5px;
     background-color: #1F0318;
     opacity: 0.8;
@@ -47,42 +49,42 @@ nav.darkTheme a.active, nav.darkTheme li.active{
     border-color: #6E6A6F;
 }
 
-main nav a.dummy-nav{
+main nav a.dummy-nav {
     color: transparent;
     background-color: transparent;
 }
 
-.flex-container .pageWrapper{
+.flex-container .pageWrapper {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     text-align: center;
-  }
+}
 
-div.darkTheme .welcomeCard{
+div.darkTheme .welcomeCard {
     background-color: #000;
     color: #DFF3E4;
     text-align: center;
     border-radius: 0 15px 0 15px;
     margin: 2% 12.5%;
-    width:75%;
+    width: 75%;
     padding: 3% 2%;
     font-size: 1.25rem;
     display: block;
 }
 
-div.darkTheme .formCard{
+div.darkTheme .formCard {
     border: #D8315B solid 3px;
     display: block;
-    border-radius: 1em;
+    border-radius: 2em;
     margin: 5% 25%;
     width: 50%;
 }
 
-div.darkTheme #shorten_url{
+div.darkTheme #shorten_url {
     display: block;
-    border-radius: 1em 1em 0 0;
+    border-radius: 2em 2em 0 0;
     height: 2em;
     width: 100%;
     text-align: center;
@@ -90,38 +92,38 @@ div.darkTheme #shorten_url{
     color: #046865;
 }
 
-div.darkTheme #shorten_btn{
+div.darkTheme #shorten_btn {
     display: block;
-    border-radius: 0 0 1em 1em;
+    border-radius: 0 0 2em 2em;
     height: 2em;
     width: 100%;
     background-color: #D8315B;
     color: #FFA62B;
 }
 
-div.lightTheme .welcomeCard{
+div.lightTheme .welcomeCard {
     background-color: #FFA62B;
     color: #DFF3E4;
     text-align: center;
     border-radius: 0 15px 0 15px;
     margin: 2% 12.5%;
-    width:75%;
+    width: 75%;
     padding: 3% 2%;
     font-size: 1.25rem;
     display: block;
 }
 
-div.lightTheme .formCard{
+div.lightTheme .formCard {
     border: #D8315B solid 3px;
     display: block;
-    border-radius: 1em;
+    border-radius: 2em;
     margin: 5% 25%;
     width: 50%;
 }
 
-div.lightTheme #shorten_url{
+div.lightTheme #shorten_url {
     display: block;
-    border-radius: 1em 1em 0 0;
+    border-radius: 2em 2em 0 0;
     height: 2em;
     width: 100%;
     text-align: center;
@@ -129,9 +131,9 @@ div.lightTheme #shorten_url{
     color: #046865;
 }
 
-div.lightTheme #shorten_btn{
+div.lightTheme #shorten_btn {
     display: block;
-    border-radius: 0 0 1em 1em;
+    border-radius: 0 0 2em 2em;
     height: 2em;
     width: 100%;
     background-color: #D8315B;
