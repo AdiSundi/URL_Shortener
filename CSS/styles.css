@@ -1,7 +1,7 @@
 main {
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(to top, #046865 0%, #046865 27.5%, #3943b7 72.5%, #3943b7 100%);
+    background-image: linear-gradient(to top, rgba(4, 104, 101, 1) 0%, rgba(4, 104, 101, 1) 27.5%, rgba(57, 67, 183, 0.8) 72.5%, rgba(57, 67, 183, 0.7) 100%), url(../imgs/backimg.jpg);
     overflow-x: hidden;
     font-family: 'Shadows Into Light', Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
