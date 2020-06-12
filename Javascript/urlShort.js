@@ -12,14 +12,22 @@ function themeChanger(elementID)
     else
     {
         themeChangeTemps = document.getElementsByClassName(currentTheme);
+        // console.log(themeChangeTemps);
+        // for (var i = 0; i < themeChangeTemps.length; i++) {
+        //     console.log(themeChangeTemps[i]);
+        // }
         document.getElementById(elementID).classList.add('active');
         document.getElementById(currentTheme).classList.remove('active');
         console.log('changing from '+currentTheme+" to "+ elementID);
-        for (const i of themeChangeTemps) 
-        {            
-            i.classList.add(elementID);
-            i.classList.remove(currentTheme);
-            currentTheme=elementID;    
+        // for (const i of themeChangeTemps) 
+        // {            
+        //     i.classList.add(elementID);
+        //     i.classList.remove(currentTheme);    
+        // }
+        for (var i = 0; i < themeChangeTemps.length; i++) {
+            console.log('changing '+themeChangeTemps[i].classList+' to '+ elementID);
+            themeChangeTemps[i].classList.add(elementID);
+            themeChangeTemps[i].classList.remove(currentTheme);
         }
         if (elementID==='lightTheme')
         {
@@ -29,5 +37,6 @@ function themeChanger(elementID)
         {
             document.getElementById("hamburger-button-for-mobile-navbar").style.color='#6E6A6F';
         }
+        currentTheme=elementID;
     }
 }

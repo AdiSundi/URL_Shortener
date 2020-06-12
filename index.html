@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Aditya Sundaresan">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
@@ -43,6 +44,24 @@
           </nav>
         </div>
     </header>
+    <main>
+      <nav class="navbar navbar-expand-md dummy-nav" aria-hidden="true">       <!--this is a dummy navbar to make sure the real navbar doesn't cover content-->
+        <a class="navbar-brand dummy-nav" href="#">This is a dummy Navbar with transparent text</a>
+      </nav><br>
+      <div class="flex-container pageWrapper lightTheme">
+        <div class='welcomeCard'>
+          Welcome to ShotURL! Paste the URL you want to shorten in the box below and click shorten!
+        </div>
+        <div class='formCard'>
+          <form id="ShortenForm" name="shortenUrl"><!--action="/" method="POST"-->
+            <fieldset class="urlForm">
+              <input id="shorten_url" class="shorten-input" autocomplete="off" name="url" type="text" value="" placeholder="Shorten your link">
+              <input id="shorten_btn" class="button button-primary button-large shorten-button" type="submit" value="Shorten">
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </main>
     <script src="Javascript/urlShort.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
