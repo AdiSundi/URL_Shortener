@@ -1,43 +1,39 @@
 body header div.container nav.lightTheme{
-    background-color: #D8315B!important;
+    background-color: #D8315B;
     opacity: 0.8;
+    color: #046865;
+}
+
+body header div.container nav.lightTheme a{
+    color: #046865;
 }
 
 body header div.container nav.darkTheme{
-    background-color: #046865!important;
+    background-color: #046865;
     opacity: 0.8;
+    color: #D58936;
 }
 
-.lightThemeToggle{
-    border-radius: 5px;
-    background-color: #DFF3E4!important;
-    opacity: 0.8;
-    color: #046865!important;
+body header div.container nav.darkTheme a{
+    color: #D58936;
 }
 
-.darkThemeToggle{
+nav.lightTheme a.active, nav.lightTheme li.active{
     border-radius: 5px;
-    background-color: #1F0318!important;
+    background-color: #DFF3E4;
     opacity: 0.8;
-    color: #D58936!important;
-}
-
-nav.lightTheme .active{
-    border-radius: 5px;
-    background-color: #DFF3E4!important;
-    opacity: 0.8;
-    color: #046865!important;
-    border-width: 3px 2px !important;
+    color: #046865;
+    border-width: 3px 2px ;
     border-style: solid;
-    border-color: #3943B7!important;
+    border-color: #3943B7;
 }
 
-nav.darkTheme .active{
+nav.darkTheme a.active, nav.darkTheme li.active{
     border-radius: 5px;
-    background-color: #1F0318!important;
+    background-color: #1F0318;
     opacity: 0.8;
-    color: #D58936!important;
-    border-width: 3px 2px !important;
+    color: #D58936;
+    border-width: 3px 2px;
     border-style: solid;
-    border-color: #6E6A6F!important;
+    border-color: #6E6A6F;
 }
