@@ -73,6 +73,7 @@ function sendData(urlToShorten) {
             console.log(data.data.shortUrl.secure);
             document.getElementById('shortenedUrl').innerHTML = data.data.shortUrl.secure;
             shorturlforcopy = data.data.shortUrl.secure;
+            document.getElementById('message1').innerHTML = 'Click on the shortened link to copy it!';
         }
     }).catch(function() {
         console.log("Error");
