@@ -59,12 +59,15 @@
             </div>
             <div class='formCard'>
                 <form id="ShortenForm" name="shortenUrl">
-                    <!--action="/" method="POST"-->
                     <fieldset class="urlForm">
                         <input id="shorten_url" class="shorten-input" autocomplete="off" name="url" type="text" value="" placeholder="Shorten your link">
                         <input id="shorten_btn" class="button button-primary button-large shorten-button" type="submit" value="Shorten">
                     </fieldset>
                 </form>
+            </div>
+            <div class='flex-container shortUrlDisplayCard' id='urlDisplay'>
+                <div> <span class='shortenedUrl' id='shortenedUrl'></span></div>
+                <div> <span>Click on the shortened link to copy it!</span></div>
             </div>
         </div>
     </main>

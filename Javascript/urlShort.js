@@ -51,6 +51,7 @@ form.addEventListener("submit", function(event) {
     sendData(urlToShorten);
     form.reset();
 })
+let shorturlforcopy = '';
 
 function sendData(urlToShorten) {
     //console.log(urlToShorten);
@@ -62,11 +63,16 @@ function sendData(urlToShorten) {
         console.log(data);
         if (data.error.length != 0) {
             console.log(data.status);
+            let tempHTML = '';
             for (i = 0; i < data.error.length; i++) {
                 console.log(data.error[i]);
+                tempHTML += data.error[i];
             }
+            document.getElementById('shortenedUrl').innerHTML = tempHTML;
         } else {
             console.log(data.data.shortUrl.secure);
+            document.getElementById('shortenedUrl').innerHTML = data.data.shortUrl.secure;
+            shorturlforcopy = data.data.shortUrl.secure;
         }
     }).catch(function() {
         console.log("Error");
@@ -85,4 +91,25 @@ function sendData(urlToShorten) {
 //         xmlHttp.open("GET", getUrl, true); // true for asynchronous 
 //         xmlHttp.send(null);
 //     }
+// }
+document.getElementById('shortenedUrl').addEventListener('click', function() {
+    const el = document.createElement('textarea');
+    el.value = shorturlforcopy;
+    el.setAttribute('readonly', '');
+    el.style.position = 'absolute';
+    el.style.left = '-9999px';
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    alert("your link has been copied to clipboard!!");
+})
+
+
+// function copyFunc() {
+//     document.getElementById('shortenedUrl').select();
+//     //copyText.select();
+//     document.getElementById('shortenedUrl').setSelectionRange(0, 99999);
+//     document.execCommand("copy");
+//     alert("Copied your link!!");
 // }
