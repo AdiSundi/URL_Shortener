@@ -102,7 +102,7 @@ document.getElementById('shortenedUrl').addEventListener('click', function() {
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
-    alert("your link has been copied to clipboard!!");
+    alert("your link has been copied to clipboard!!\nThe redirect link may, at times, be tagged as suspicious by some browsers as the API used is freeware and could have been misused by someone else. Rest assured that the links are safe : ) !");
 })
 
 

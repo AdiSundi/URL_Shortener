@@ -21,9 +21,17 @@
     }
     
     div.shorturldisplaycard {
-        display: flex;
+        display: block;
         align-items: center;
         justify-content: center;
         text-align: center;
         margin: 0 auto;
+    }
+    
+    span {
+        display: block;
+        margin: 0 auto;
+        width: 40%;
+        text-align: center;
+        color: #fff;
     }
