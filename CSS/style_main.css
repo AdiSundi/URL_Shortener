@@ -1,0 +1,21 @@
+    main {
+        height: 100vh;
+        width: 100vw;
+        background-position-x: center;
+        overflow-x: hidden;
+        font-family: 'Shadows Into Light', Arial, Helvetica, sans-serif;
+        font-size: 1.5rem;
+    }
+    
+    main nav a.dummy-nav {
+        color: transparent;
+        background-color: transparent;
+    }
+    
+    .flex-container .pageWrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }

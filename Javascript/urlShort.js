@@ -9,22 +9,19 @@ function themeChanger(elementID) {
         console.log('Theme changer called; No change needed; current theme: ' + currentTheme);
     } else {
         themeChangeTemps = document.getElementsByClassName(currentTheme);
-        // console.log(themeChangeTemps);
-        // for (var i = 0; i < themeChangeTemps.length; i++) {
+        NoOfThemeClassesToChange = themeChangeTemps.length;
+        // for (var i = 0; i < NoOfThemeClassesToChange; i++) {
         //     console.log(themeChangeTemps[i]);
         // }
         document.getElementById(elementID).classList.add('active');
         document.getElementById(currentTheme).classList.remove('active');
         console.log('changing from ' + currentTheme + " to " + elementID);
-        // for (const i of themeChangeTemps) 
-        // {            
-        //     i.classList.add(elementID);
-        //     i.classList.remove(currentTheme);    
-        // }
-        for (var i = 0; i < themeChangeTemps.length; i++) {
-            console.log('changing ' + themeChangeTemps[i].classList + ' to ' + elementID);
-            themeChangeTemps[i].classList.add(elementID);
-            themeChangeTemps[i].classList.remove(currentTheme);
+        //console.log(themeChangeTemps.length);
+        for (var i = 0; i < NoOfThemeClassesToChange; i++) {
+            //console.log('changing ' + themeChangeTemps[0].classList + ' to ' + elementID);
+            themeChangeTemps[0].classList.add(elementID);
+            themeChangeTemps[0].classList.remove(currentTheme);
+            //console.log(themeChangeTemps.length);
         }
         if (elementID === 'lightTheme') {
             document.getElementById("hamburger-button-for-mobile-navbar").style.color = '#3943B7';
@@ -33,4 +30,14 @@ function themeChanger(elementID) {
         }
         currentTheme = elementID;
     }
+}
+let form = document.getElementById("ShortenForm");
+form.addEventListener("submit", function(event) {
+    let urlToShorten = document.getElementById('shorten_url');
+    event.preventDefault();
+    sendData(urlToShorten);
+})
+
+function sendData(urlToShorten) {
+    console.log(urlToShorten.value);
 }
