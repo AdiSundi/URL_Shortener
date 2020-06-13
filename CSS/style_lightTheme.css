@@ -1,0 +1,63 @@
+main.lightTheme {
+    background-image: linear-gradient(to top, rgba(4, 104, 101, 1) 0%, rgba(4, 104, 101, 1) 27.5%, rgba(57, 67, 183, 0.8) 72.5%, rgba(57, 67, 183, 0.7) 100%), url(../imgs/backimg.jpg);
+}
+
+body header div.container nav.lightTheme {
+    background-color: #D8315B;
+    opacity: 0.95;
+    color: #046865;
+}
+
+body header div.container nav.lightTheme a {
+    color: #046865;
+}
+
+nav.lightTheme a.active,
+nav.lightTheme li.active {
+    border-radius: 5px;
+    background-color: #DFF3E4;
+    opacity: 0.8;
+    color: #046865;
+    border-width: 3px 2px;
+    border-style: solid;
+    border-color: #3943B7;
+}
+
+div.lightTheme .welcomeCard {
+    background-color: #FFA62B;
+    color: #DFF3E4;
+    text-align: center;
+    border-radius: 0 15px 0 15px;
+    margin: 2% 12.5%;
+    width: 75%;
+    padding: 3% 2%;
+    font-size: 1.25rem;
+    display: block;
+}
+
+div.lightTheme .formCard {
+    border: #D8315B solid 3px;
+    display: block;
+    border-radius: 2em;
+    margin: 15% 15%;
+    width: 70%;
+}
+
+div.lightTheme #shorten_url {
+    display: block;
+    border-radius: 2em 2em 0 0;
+    height: 2em;
+    width: 100%;
+    text-align: center;
+    background-color: #DFF3E4;
+    color: #046865;
+}
+
+div.lightTheme #shorten_btn {
+    display: block;
+    border-radius: 0 0 2em 2em;
+    height: 2em;
+    width: 100%;
+    background-color: #D8315B;
+    color: #FFA62B;
+}

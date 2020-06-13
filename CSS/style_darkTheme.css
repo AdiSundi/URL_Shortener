@@ -1,0 +1,63 @@
+main.darkTheme {
+    background-image: linear-gradient(to top, rgba(31, 3, 24, 1) 0%, rgba(31, 3, 24, 1) 27.5%, rgba(213, 137, 54, 0.8) 72.5%, rgba(213, 137, 54, 0.7) 100%), url(../imgs/backimg_dark.jpg);
+}
+
+body header div.container nav.darkTheme {
+    background-color: #046865;
+    opacity: 0.95;
+    color: #1f0318;
+}
+
+body header div.container nav.darkTheme a {
+    color: #1f0318;
+}
+
+nav.darkTheme a.active,
+nav.darkTheme li.active {
+    border-radius: 5px;
+    background-color: #6e6a6f;
+    opacity: 0.8;
+    color: #1f0318;
+    border-width: 3px 2px;
+    border-style: solid;
+    border-color: #d58936;
+}
+
+div.darkTheme .welcomeCard {
+    background-color: #050609;
+    color: #6e6a6f;
+    text-align: center;
+    border-radius: 0 15px 0 15px;
+    margin: 2% 12.5%;
+    width: 75%;
+    padding: 3% 2%;
+    font-size: 1.25rem;
+    display: block;
+}
+
+div.darkTheme .formCard {
+    border: #046865 solid 3px;
+    display: block;
+    border-radius: 2em;
+    margin: 15% 15%;
+    width: 70%;
+}
+
+div.darkTheme #shorten_url {
+    display: block;
+    border-radius: 2em 2em 0 0;
+    height: 2em;
+    width: 100%;
+    text-align: center;
+    background-color: #6e6a6f;
+    color: #d58936;
+}
+
+div.darkTheme #shorten_btn {
+    display: block;
+    border-radius: 0 0 2em 2em;
+    height: 2em;
+    width: 100%;
+    background-color: #046865;
+    color: #050609;
+}
