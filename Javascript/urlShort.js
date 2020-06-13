@@ -33,11 +33,56 @@ function themeChanger(elementID) {
 }
 let form = document.getElementById("ShortenForm");
 form.addEventListener("submit", function(event) {
-    let urlToShorten = document.getElementById('shorten_url');
+    let urls = document.getElementById('shorten_url');
     event.preventDefault();
+    let urlToShorten;
+    let urls1 = urls.value;
+    let checkhttp = urls1.slice(0, 4);
+    let checkhttps = urls1.slice(0, 5);
+    if (checkhttp == 'http' && checkhttps == 'https') {
+        urlToShorten = urls1;
+    } else if (checkhttp == 'http' && checkhttps != 'https') {
+        let urltemp = urls1.slice(4, urls1.length);
+        console.log(urltemp);
+        urlToShorten = 'https' + urltemp;
+    } else {
+        urlToShorten = 'https://' + urls1;
+    }
     sendData(urlToShorten);
+    form.reset();
 })
 
 function sendData(urlToShorten) {
-    console.log(urlToShorten.value);
+    //console.log(urlToShorten);
+    let getUrl = 'https://cu8.in/api/?action=short&urls=|' + urlToShorten + '|';
+    //console.log(getUrl);
+    fetch(getUrl).then(function(response) {
+        return response.json();
+    }).then(function(data) {
+        console.log(data);
+        if (data.error.length != 0) {
+            console.log(data.status);
+            for (i = 0; i < data.error.length; i++) {
+                console.log(data.error[i]);
+            }
+        } else {
+            console.log(data.data.shortUrl.secure);
+        }
+    }).catch(function() {
+        console.log("Error");
+    });
 }
+
+// function httpGetAsync(getUrl, callback) {
+//     console.log('ajax call started ');
+//     var xmlHttp = new XMLHttpRequest();
+//     xmlHttp.onreadystatechange = function() {
+//         console.log('response awaited');
+//         if (xmlHttp.readyState == 4) {
+//             callback(xmlHttp.responseText);
+//             console.log(xmlHttp.responseText);
+//         }
+//         xmlHttp.open("GET", getUrl, true); // true for asynchronous 
+//         xmlHttp.send(null);
+//     }
+// }
