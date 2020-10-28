@@ -54,63 +54,40 @@ form.addEventListener("submit", function(event) {
 let shorturlforcopy = '';
 
 function sendData(urlToShorten) {
-    //console.log(urlToShorten);
-    let getUrl = 'https://cu8.in/api/?action=short&urls=|' + urlToShorten + '|';
-    //console.log(getUrl);
-    fetch(getUrl).then(function(response) {
-        return response.json();
-    }).then(function(data) {
-        console.log(data);
-        if (data.error.length != 0) {
-            console.log(data.status);
-            let tempHTML = '';
-            for (i = 0; i < data.error.length; i++) {
-                console.log(data.error[i]);
-                tempHTML += data.error[i];
-            }
-            document.getElementById('shortenedUrl').innerHTML = tempHTML;
-        } else {
-            console.log(data.data.shortUrl.secure);
-            document.getElementById('shortenedUrl').innerHTML = data.data.shortUrl.secure;
-            shorturlforcopy = data.data.shortUrl.secure;
-            document.getElementById('message1').innerHTML = 'Click on the shortened link to copy it!';
+    console.log('url to shorten is');
+    console.log(urlToShorten);
+
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://url-shortener-service.p.rapidapi.com/shorten",
+        "method": "POST",
+        "headers": {
+            "x-rapidapi-host": "url-shortener-service.p.rapidapi.com",
+            "x-rapidapi-key": "e39d010a65msh98a014752b0de3ep12eb64jsn01026054101f",
+            "content-type": "application/x-www-form-urlencoded"
+        },
+        "data": {
+            "url": urlToShorten
         }
-    }).catch(function() {
-        console.log("Error");
+    }
+
+    $.ajax(settings).done(function(response) {
+        console.log(response);
+        shorturlforcopy = response.result_url;
+        document.getElementById('shortenedUrl').innerHTML = shorturlforcopy;
+        document.getElementById('message1').innerHTML = 'This is your shortened link! Click on it to copy to clipboard!\n Thanks for using this service!';
     });
 }
-
-// function httpGetAsync(getUrl, callback) {
-//     console.log('ajax call started ');
-//     var xmlHttp = new XMLHttpRequest();
-//     xmlHttp.onreadystatechange = function() {
-//         console.log('response awaited');
-//         if (xmlHttp.readyState == 4) {
-//             callback(xmlHttp.responseText);
-//             console.log(xmlHttp.responseText);
-//         }
-//         xmlHttp.open("GET", getUrl, true); // true for asynchronous 
-//         xmlHttp.send(null);
-//     }
-// }
 document.getElementById('shortenedUrl').addEventListener('click', function() {
-    const el = document.createElement('textarea');
-    el.value = shorturlforcopy;
-    el.setAttribute('readonly', '');
-    el.style.position = 'absolute';
-    el.style.left = '-9999px';
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-    alert("your link has been copied to clipboard!!\nThe redirect link may, at times, be tagged as suspicious by some browsers as the API used is freeware and could have been misused by someone else. Rest assured that the links are safe : ) !");
-})
-
-
-// function copyFunc() {
-//     document.getElementById('shortenedUrl').select();
-//     //copyText.select();
-//     document.getElementById('shortenedUrl').setSelectionRange(0, 99999);
-//     document.execCommand("copy");
-//     alert("Copied your link!!");
-// }
+            const el = document.createElement('textarea');
+            el.value = shorturlforcopy;
+            el.setAttribute('readonly', '');
+            el.style.position = 'absolute';
+            el.style.left = '-9999px';
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            alert("your link has been copied to clipboard!!\n Thanks for using this service!"
+            })
