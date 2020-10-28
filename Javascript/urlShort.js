@@ -89,5 +89,5 @@ document.getElementById('shortenedUrl').addEventListener('click', function() {
             el.select();
             document.execCommand('copy');
             document.body.removeChild(el);
-            alert("your link has been copied to clipboard!!\n Thanks for using this service!"
+            alert("your link has been copied to clipboard!!\n Thanks for using this service!");
             })
